@@ -1,0 +1,31 @@
+.caja {
+	border: 2px solid black;
+	background-color: transparent;
+}
+.caja-title {
+	background-color: #263238;
+	border-radius: 5px 0 0 0;
+	color: white;
+	position: relative;
+	padding-left: 8px;
+	padding-right: 8px;
+	z-index: 1;
+	text-transform: uppercase;
+}
+.caja-title:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 10px;
+	height: 100%;
+	width: 100%;
+	background-color: #263238;
+	transform: skew(30deg);
+	z-index: -1;
+}
+.caja-title-space {
+	margin-left: 5px;
+	color: transparent;
+	box-shadow: inset 0 0 0 3px #5c5c5c;
+	transform: skew(30deg);
+}
