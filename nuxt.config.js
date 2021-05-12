@@ -1,13 +1,11 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
-  server: {
-    port: 8000,
-    host: '0.0.0.0',
-  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-
+  router: {
+    base: '/pablosoftwars.github.io/'
+  },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - cv-web',
