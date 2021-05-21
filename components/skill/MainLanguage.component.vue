@@ -9,13 +9,15 @@
           <v-col class="d-flex flex-wrap justify-space-around">
             <div v-for="(item, i) in listPrimary" :key="i" class="mt-4">
               <v-progress-circular
-                color="teal darken-4"
+                color="teal darken-2"
                 :value="item.value"
                 size="100"
                 width="10"
                 class="mx-5"
               >
-                <v-icon x-large>{{ item.icon }}</v-icon>
+                <v-icon color="blue-grey darken-4" x-large>
+                  {{ item.icon }}
+                </v-icon>
               </v-progress-circular>
               <div class="text-center">
                 <p class="title">{{ item.text }}</p>

@@ -3,10 +3,6 @@
     <main-language></main-language>
     <br />
     <other-skill></other-skill>
-    <br />
-    <br />
-    <br />
-    <br />
   </v-container>
 </template>
 <script>

@@ -1,13 +1,13 @@
 <template>
   <v-card flat class="transparent text-center">
-    <v-card-actions class="d-flex align-center justify-center">
+    <v-card-actions class="d-flex flex-wrap align-center justify-center">
       <v-tooltip v-for="(item, i) in listContact" :key="i" bottom color="teal">
         <template #activator="{ on, attrs }">
           <v-btn
             color="blue-grey darken-4"
             outlined
             x-large
-            class="mx-5 iconos"
+            class="mx-5 my-2 iconos"
             icon
             link
             :href="item.url"
@@ -33,14 +33,24 @@ export default {
       audioEffectsHover: null,
       listContact: [
         {
-          icon: 'mdi-gmail',
+          icon: '$vuetify.icons.gmailicon',
           tooltip: 'Email: pablquir@gmail.com',
           url: 'mailto:pablquir@gmail.com',
         },
         {
-          icon: 'mdi-phone',
+          icon: '$vuetify.icons.whatsappicon',
           tooltip: 'Whatsapp: 591 75544663',
           url: 'https://wa.me/59175544663',
+        },
+        {
+          icon: '$vuetify.icons.githubicon',
+          tooltip: 'https://github.com/pablosoftwars/pablosoftwars.github.io',
+          url: 'https://github.com/pablosoftwars/pablosoftwars.github.io',
+        },
+        {
+          icon: '$vuetify.icons.linkedinicon',
+          tooltip: 'https://www.linkedin.com/in/pablo-quiroz-7b6181176',
+          url: 'https://www.linkedin.com/in/pablo-quiroz-7b6181176',
         },
       ],
     }
@@ -57,9 +67,9 @@ export default {
   methods: {
     animateIconsSocial() {
       this.$gsap.from('.iconos', {
-        y: -10,
         opacity: 0,
-        stagger: 0.2,
+        scale: 2,
+        stagger: 0.3,
         ease: 'bounce',
       })
     },

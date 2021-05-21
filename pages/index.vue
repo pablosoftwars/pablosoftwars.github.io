@@ -1,8 +1,8 @@
 <template>
   <v-container>
     <photo></photo>
-    <br />
     <profession></profession>
+    <br />
     <icon-social></icon-social>
   </v-container>
 </template>

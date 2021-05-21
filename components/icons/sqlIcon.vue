@@ -9,7 +9,7 @@
     width="554.625px"
     height="554.625px"
     viewBox="0 0 554.625 554.625"
-    style="enable-background: new 0 0 554.625 554.625"
+    style="enable-background: new 0 0 554.625 554.625; fill: currentColor"
     xml:space="preserve"
   >
     <g>

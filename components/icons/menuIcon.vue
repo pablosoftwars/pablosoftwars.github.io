@@ -1,6 +1,5 @@
 <template>
   <svg
-    id="mdi-vuetify"
     xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink"
     version="1.1"
@@ -9,8 +8,8 @@
     viewBox="0 0 24 24"
   >
     <path
-      style="fill: currentColor; stroke: none"
-      d="M12,11.64L7.92,2H16.08L12,11.64M12,21.95L3.27,4.91H7.84L12,14.47L16.16,4.91H20.73L12,21.95Z"
+      fill="currentColor"
+      d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z"
     />
   </svg>
 </template>

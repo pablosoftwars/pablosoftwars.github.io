@@ -12,11 +12,15 @@
       >
         <v-card-text :class="['d-flex', 'justify-' + item.justifyItem]">
           <v-card flat class="transparent" max-width="500">
-            <v-card-title>
-              <p class="cajita" style="color: #004d40">{{ item.name }}</p>
+            <v-card-title class="pb-0 d-flex flex-column align-start">
+              <p class="cajita teal--text text--darken-2 mb-0">
+                {{ item.name }}
+              </p>
+              <p class="title pb-0 blue-grey--text text--darken-4">
+                {{ item.position }}
+              </p>
             </v-card-title>
             <v-card-text>
-              {{ item.position }}
               <p class="title font-weight-light">
                 {{ item.detalle }}
               </p>

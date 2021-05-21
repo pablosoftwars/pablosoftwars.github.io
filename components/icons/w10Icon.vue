@@ -11,6 +11,7 @@
     <g>
       <g>
         <path
+          style="fill: currentColor; stroke: none"
           d="M0.2,224L0,68l192-26.1V224H0.2z M224,37.2L479.9,0v224H224V37.2z M480,256l-0.1,224L224,444V256H480z M192,439.9     L0.2,413.6l0-157.6H192V439.9z"
         />
       </g>

@@ -22,10 +22,44 @@ import DonboscoIcon from '@/components/icons/donboscoIcon.vue'
 import MamamargaritaIcon from '@/components/icons/mamamargaritaIcon.vue'
 import CajapretroleraIcon from '@/components/icons/cajapetroleraIcon.vue'
 import VuetifyIcon from '@/components/icons/vuetifyIcon.vue'
+import LinkedInIcon from '@/components/icons/linkedinIcon.vue'
+import CogIcon from '@/components/icons/cogIcon.vue'
+import MenuIcon from '@/components/icons/menuIcon.vue'
+import WhatsappIcon from '@/components/icons/whatsappIcon.vue'
+import GmailIcon from '@/components/icons/gmailIcon.vue'
+
+import CheckBoxIconBlank from '@/components/icons/checkboxIconBlank.vue'
+import CheckBoxIconMarked from '@/components/icons/checkboxIconMarked.vue'
 
 export default {
+  font: {
+    family: 'Droid Sans'
+  },
   icons: {
     values: {
+      //iconos para vuetify//
+      checkboxOff: {
+        component: CheckBoxIconBlank,
+      },
+      checkboxOn: {
+        component: CheckBoxIconMarked,
+      },
+      ///////////////////////
+      gmailicon: {
+        component: GmailIcon,
+      },
+      whatsappicon: {
+        component: WhatsappIcon,
+      },
+      menuicon: {
+        component: MenuIcon,
+      },
+      linkedinicon: {
+        component: LinkedInIcon,
+      },
+      cogicon: {
+        component: CogIcon,
+      },
       vuetifyicon: {
         component: VuetifyIcon,
       },

@@ -1,10 +1,6 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
-  server: {
-    port: 8000,
-    host: '0.0.0.0',
-  },
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -19,11 +15,6 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      {
-        rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Orbitron&display=swap',
-      },
     ],
   },
 
@@ -66,6 +57,8 @@ export default {
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
+    defaultAssets: false,
+    treeShake: true,
     optionsPath: '~/plugins/vuetify.config.js',
     theme: {
       dark: false,

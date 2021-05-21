@@ -1,29 +1,32 @@
 <template>
   <v-app dark>
-    <preload v-if="mostrarPreload"></preload>
+    <preload v-show="mostrarPreload"></preload>
     <v-main class="containers">
       <wallpaper></wallpaper>
 
-      <v-container>
-        <v-card class="rounded-xl transparent overflow-hidden" height="95vh">
+      <v-container :class="[mostrarPreload ? 'layout-blur' : '']">
+        <v-card
+          class="rounded-xl transparent overflow-hidden flex-grow-1"
+          height="95vh"
+        >
           <v-app-bar flat color="transparent">
-            <span class="caja-title">Curriculum</span>
-            <span class="caja-title-space">aa</span>
-            <span class="caja-title-space">aa</span>
-            <span class="caja-title-space">aa</span>
+            <span class="caja-title font-weight-bold">Curriculum</span>
+            <span class="caja-title-space"></span>
+            <span class="caja-title-space"></span>
+            <span class="caja-title-space"></span>
             <v-spacer></v-spacer>
             <v-card flat color="transparent">
               <div v-if="$vuetify.breakpoint.mobile" class="text-center">
                 <v-menu rounded="lg" absolute offset-y>
                   <template #activator="{ on, attrs }">
                     <v-btn outlined v-bind="attrs" v-on="on">
-                      <v-icon>mdi-menu</v-icon>
+                      <v-icon>$vuetify.icons.menuicon</v-icon>
                     </v-btn>
                   </template>
-                  <v-list class="background-list">
+                  <v-list color="rgba(230, 230, 230, 0.9)">
                     <v-list-item-group
                       v-model="selectedListRoutes"
-                      color="teal darken-4"
+                      color="teal darken-2"
                     >
                       <v-list-item
                         v-for="(item, i) in listRoutes"
@@ -40,14 +43,15 @@
                     </v-list-item-group>
                   </v-list>
                   <hr />
-                  <v-list class="background-list">
+                  <v-list color="rgba(230, 230, 230, 0.9)">
                     <v-list-item-title>
-                      <v-icon>mdi-cog</v-icon> Configuracion
+                      <v-icon>$vuetify.icons.cogicon</v-icon> Configuracion
                     </v-list-item-title>
                     <v-list-item>
                       <v-checkbox
                         v-model="chckboxWallpaper"
                         label="sonido de fondo"
+                        color="teal darken-2"
                         @change="switchSoundWallpaper()"
                       ></v-checkbox>
                     </v-list-item>
@@ -55,6 +59,7 @@
                       <v-checkbox
                         v-model="chckboxEffects"
                         label="sonido interactivo"
+                        color="teal darken-2"
                         @change="switchSoundEffect()"
                       ></v-checkbox>
                     </v-list-item>
@@ -63,7 +68,7 @@
               </div>
               <div v-else class="text-center">
                 <v-tabs
-                  color="teal darken-4"
+                  color="teal darken-2"
                   show-arrows
                   background-color="transparent"
                 >
@@ -72,6 +77,7 @@
                     :key="i"
                     :to="item.to"
                     router
+                    class="font-weight-black"
                     @mouseenter="$vuetify.breakpoint.mobile ? '' : playHover()"
                     @click="playClick()"
                   >
@@ -80,14 +86,15 @@
                   <v-menu rounded="lg" offset-y :close-on-content-click="false">
                     <template #activator="{ on, attrs }">
                       <v-btn icon v-bind="attrs" v-on="on">
-                        <v-icon>mdi-cog</v-icon>
+                        <v-icon>$vuetify.icons.cogicon</v-icon>
                       </v-btn>
                     </template>
-                    <v-list class="background-list">
+                    <v-list color="rgba(230, 230, 230, 0.8)">
                       <v-list-item>
                         <v-checkbox
                           v-model="chckboxWallpaper"
                           label="sonido de fondo"
+                          color="teal darken-2"
                           @change="switchSoundWallpaper()"
                         ></v-checkbox>
                       </v-list-item>
@@ -95,6 +102,7 @@
                         <v-checkbox
                           v-model="chckboxEffects"
                           label="sonido interactivo"
+                          color="teal darken-2"
                           @change="switchSoundEffect()"
                         ></v-checkbox>
                       </v-list-item>
@@ -104,8 +112,12 @@
               </div>
             </v-card>
           </v-app-bar>
-          <v-responsive class="overflow-y-auto pb-5" max-height="100vh">
+          <v-responsive class="overflow-y-auto" max-height="100vh">
             <nuxt />
+            <br />
+            <br />
+            <br />
+            <br />
           </v-responsive>
         </v-card>
       </v-container>
@@ -126,13 +138,13 @@ export default {
   transition: 'scale-transition',
   data() {
     return {
+      mostrarPreload: true,
       audioWallpaper: null,
       audioEffectsClick: null,
       audioEffectsHover: null,
       chckboxWallpaper: false,
       chckboxEffects: true,
       playStop: false,
-      mostrarPreload: true,
       selectedListRoutes: 0,
       listRoutes: [
         {
@@ -166,7 +178,11 @@ export default {
   },
   mounted() {
     this.loadAudio()
-    this.mostrarPreload = false
+    this.$nextTick(() => {
+      setTimeout(() => {
+        this.mostrarPreload = false
+      }, 300)
+    })
   },
   methods: {
     ...mapMutations({
@@ -219,12 +235,5 @@ export default {
 <style scoped>
 main {
   background-color: #e6e6e6;
-}
-.background-list {
-  background-color: rgba(230, 230, 230, 0.9);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border-top: 2px solid rgba(255, 255, 255, 0.5);
-  border-left: 2px solid rgba(255, 255, 255, 0.5);
 }
 </style>

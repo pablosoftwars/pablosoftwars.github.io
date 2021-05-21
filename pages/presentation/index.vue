@@ -3,10 +3,6 @@
     <presentation></presentation>
     <br />
     <education></education>
-    <br />
-    <br />
-    <br />
-    <br />
   </v-container>
 </template>
 <script>

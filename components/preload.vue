@@ -304,22 +304,10 @@
     </div>
   </div>
 </template>
-<script>
-export default {
-  mounted() {
-    this.$gsap.to('rings9', {
-      duration: 30,
-      rotation: 360,
-      ease: 'none',
-    })
-    window.console.log('montado')
-  },
-}
-</script>
 <style scoped>
 #contenedor {
   display: flex;
-  background-color: rgba(230, 230, 230, 1);
+  background-color: transparent;
   align-items: center;
   height: 100vh;
   width: 100%;
@@ -329,5 +317,47 @@ export default {
 }
 #circle {
   width: 400px;
+}
+#ringGrp1 {
+  animation-name: rotarderecha;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+#ringGrp2 {
+  animation-name: rotarizquierda;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+#ringGrp3 {
+  animation-name: rotarizquierda;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+#ringGrp4 {
+  animation-name: rotarderecha;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+#ringGrp5 {
+  animation-name: rotarderecha;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+#ringGrp7 {
+  animation-name: rotarizquierda;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+}
+
+#ringGrp9 {
+  animation-name: rotarderecha;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-timing-function: linear;
 }
 </style>

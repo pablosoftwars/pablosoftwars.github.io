@@ -14,8 +14,14 @@
           >
             <v-icon size="100">{{ item.icon }}</v-icon>
             <v-card-title
-              class="py-0 d-flex align-center justify-center"
-              style="color: #004d40"
+              class="
+                py-0
+                d-flex
+                align-center
+                justify-center
+                teal--text
+                text--darken-2
+              "
             >
               {{ item.name }}
             </v-card-title>

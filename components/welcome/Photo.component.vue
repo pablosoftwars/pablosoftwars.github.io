@@ -65,7 +65,7 @@ export default {
   height: 180px;
   width: 180px;
   border-radius: 50%;
-  border: 2px solid black;
+  background-color: rgba(10, 10, 10, 0.4);
   z-index: -1;
 }
 </style>

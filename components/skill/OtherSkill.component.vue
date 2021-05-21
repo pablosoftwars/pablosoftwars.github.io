@@ -17,14 +17,16 @@
               size="200"
               width="40"
               :value="dataProgressCircle.value"
-              color="teal darken-4"
+              color="teal darken-2"
             >
-              <v-icon x-large>{{ dataProgressCircle.icon }}</v-icon>
+              <v-icon x-large color="blue-grey darken-4">
+                {{ dataProgressCircle.icon }}
+              </v-icon>
             </v-progress-circular>
-            <p class="title text-uppercase mt-4">
+            <p class="title font-weight-bold text-uppercase mt-4">
               {{ dataProgressCircle.text }}
             </p>
-            <p class="mt-n3">
+            <p class="title mt-n3">
               {{ dataProgressCircle.detalle }}
             </p>
           </v-col>
@@ -34,7 +36,7 @@
               <v-list rounded color="transparent">
                 <v-list-item-group
                   v-model="selectedItem"
-                  active-class="tealdarken4-texto"
+                  active-class="teal--text text--darken-2"
                 >
                   <v-list-item
                     v-for="(item, i) in listSecondary"
@@ -46,7 +48,9 @@
                     "
                   >
                     <v-list-item-icon>
-                      <v-icon large>{{ item.icon }}</v-icon>
+                      <v-icon large color="blue-grey darken-4">
+                        {{ item.icon }}
+                      </v-icon>
                     </v-list-item-icon>
                     <v-divider vertical></v-divider>
                     <v-list-item-content>
@@ -252,8 +256,3 @@ export default {
   },
 }
 </script>
-<style scoped>
-.tealdarken4-texto {
-  color: #004d40;
-}
-</style>

@@ -1,10 +1,6 @@
 <template>
   <v-container>
     <item-job></item-job>
-    <br />
-    <br />
-    <br />
-    <br />
   </v-container>
 </template>
 <script>

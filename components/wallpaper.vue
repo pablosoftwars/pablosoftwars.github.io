@@ -50,7 +50,7 @@ export default {
               Math.sin(this.increment)
         )
       }
-      this.ctx.strokeStyle = 'hsl(200, 19%, 18%)'
+      this.ctx.strokeStyle = 'rgb(37, 48, 54)'
       this.ctx.stroke()
       this.increment += this.wave.frequency
     },

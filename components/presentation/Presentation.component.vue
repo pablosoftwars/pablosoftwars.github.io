@@ -3,12 +3,10 @@
     <v-card-title>
       <span class="caja-title">Presentacion</span>
     </v-card-title>
-    <v-card-text>
-      <div class="mx-5 title font-weight-light">
-        <p v-for="(item, i) in parrafo" :key="i" class="paragraphStudy">
-          {{ item }}
-        </p>
-      </div>
+    <v-card-text class="mx-5">
+      <p v-for="(item, i) in parrafo" :key="i" class="title paragraphStudy">
+        {{ item }}
+      </p>
     </v-card-text>
   </v-card>
 </template>
