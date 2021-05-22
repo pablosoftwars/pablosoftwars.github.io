@@ -1,7 +1,9 @@
 <template>
   <v-card flat class="transparent">
     <div class="photo-container d-flex align-center justify-center">
-      <img class="photo-frame" src="~/static/profile-photo.png" alt="photo" />
+      <v-avatar size="160">
+        <img class="photo-frame" src="~/static/profile-photo.png" alt="photo" />
+      </v-avatar>
       <div class="circle-container">
         <div class="circle-item"></div>
         <div class="circle-item"></div>
@@ -35,8 +37,6 @@ export default {
 <style scoped>
 .photo-frame {
   border-radius: 50%;
-  height: 150px;
-  width: 150px;
 }
 .photo-container {
   position: relative;

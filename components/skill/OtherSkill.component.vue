@@ -23,12 +23,22 @@
                 {{ dataProgressCircle.icon }}
               </v-icon>
             </v-progress-circular>
-            <p class="title font-weight-bold text-uppercase mt-4">
-              {{ dataProgressCircle.text }}
-            </p>
-            <p class="title mt-n3">
+            <div class="mt-4">
+              <v-chip outlined>
+                <span
+                  class="mr-2 teal--text text--darken-3 title font-weight-bold"
+                >
+                  {{ dataProgressCircle.type }}
+                </span>
+                <v-divider vertical></v-divider>
+                <span class="ml-2 title">
+                  {{ dataProgressCircle.text }}
+                </span>
+              </v-chip>
+            </div>
+            <span class="title mt-4">
               {{ dataProgressCircle.detalle }}
-            </p>
+            </span>
           </v-col>
 
           <v-col cols="12" md="4" sm="4">
@@ -81,110 +91,131 @@ export default {
       dataProgressCircle: {
         value: 0,
         text: '',
+        type: '',
         detalle: '',
         icon: '',
       },
       listSecondary: [
         {
           icon: '$vuetify.icons.vueicon',
-          text: 'vuejs',
-          detalle: 'Libreria de javascript enfocada en Fronted',
+          text: 'Vuejs',
+          type: 'Librería ',
+          detalle: 'Javascript reactivo enfocado en Front-End',
           value: '0',
         },
         {
           icon: '$vuetify.icons.vuetifyicon',
-          text: 'vuetify',
-          detalle: 'Framework enfocado en de Material Design',
+          text: 'Vuetify',
+          type: 'Framework',
+          detalle:
+            'Diseño de Material Design para Vue enfocado en el Front-End',
           value: '0',
         },
         {
           icon: '$vuetify.icons.nuxticon',
-          text: 'nuxt',
-          detalle: 'Framework para Vue enfocado en Fronted',
+          text: 'Nuxt',
+          type: 'Framework',
+          detalle:
+            'Diseñado para dar mas poder a Vue y es de codigo abierto enfocado en Front-End',
           value: '0',
         },
         {
           icon: '$vuetify.icons.laravelicon',
-          text: 'laravel',
-          detalle: 'Framework php para Backend',
+          text: 'Laravel',
+          type: 'Framework',
+          detalle:
+            'Framework Php para aplicaciones web, enfocado en Back-End y Front-End',
           value: '0',
         },
         {
           icon: '$vuetify.icons.postmanicon',
-          text: 'postman',
-          detalle: 'Herramienta de monitoreo API para backend',
+          text: 'Postman',
+          type: 'App de Escritorio',
+          detalle: 'Herramienta de monitoreo API para Back-End',
           value: '0',
         },
         {
           icon: '$vuetify.icons.htmlicon',
           text: 'html',
-          detalle: 'Lenguaje de marcado Fronted',
+          type: 'Lenguaje',
+          detalle: 'Lenguaje de marcado Fron-End',
           value: '0',
         },
         {
           icon: '$vuetify.icons.sassicon',
           text: 'sass',
-          detalle: 'Lenguaje de hojas de estilo Fronted',
+          type: 'Librería ',
+          detalle: 'Lenguaje de hojas de estilo Front-End',
           value: '0',
         },
         {
           icon: '$vuetify.icons.cssicon',
           text: 'css',
-          detalle: 'Lenguaje de hojas de estilo Fronted',
+          type: 'Librería ',
+          detalle: 'Lenguaje de hojas de estilo Front-End',
           value: '0',
         },
         {
           icon: '$vuetify.icons.bootstrapicon',
           text: 'bootstrap',
-          detalle: 'Framework enfocado en de Material Design',
+          type: 'Librería ',
+          detalle: 'Kit de Herramientas enfocado en Front-End',
           value: '0',
         },
         {
           icon: '$vuetify.icons.archicon',
           text: 'arch',
+          type: 'Sistema Operativo',
           detalle: 'Sistema Operativo Linux',
           value: '0',
         },
         {
           icon: '$vuetify.icons.w10icon',
-          text: 'windows',
-          detalle: 'Sistem Operativo Windows',
+          text: 'windows 10',
+          type: 'Sistema Operativo',
+          detalle: 'Sistema Operativo Windows',
           value: '0',
         },
         {
           icon: '$vuetify.icons.photoshopicon',
           text: 'photoshop',
+          type: 'App de Escritorio',
           detalle: 'Editor de fotografìas',
           value: '0',
         },
         {
           icon: '$vuetify.icons.inkscapeicon',
           text: 'gimp',
+          type: 'App de Escritorio',
           detalle: 'Editor de graficos vectoriales',
           value: '0',
         },
         {
           icon: '$vuetify.icons.gimpicon',
           text: 'gimp',
+          type: 'App de Escritorio',
           detalle: 'Editor de fotografìas',
           value: '0',
         },
         {
           icon: '$vuetify.icons.giticon',
           text: 'git',
+          type: 'App de Escritorio',
           detalle: 'Software de control de versiones',
           value: '0',
         },
         {
           icon: '$vuetify.icons.githubicon',
           text: 'github',
-          detalle: 'Servicio web de control de versiones',
+          type: 'Plataforma Web',
+          detalle: 'Servicio web de alojamiento de codigo',
           value: '0',
         },
         {
           icon: '$vuetify.icons.gitlabicon',
           text: 'gitlab',
-          detalle: 'Servicio web de control de versiones',
+          type: 'Plataforma Web',
+          detalle: 'Servicio web de alojamiento de codigo',
           value: '0',
         },
       ],
@@ -208,6 +239,7 @@ export default {
       this.dataProgressCircle = {
         value: item.value,
         text: item.text,
+        type: item.type,
         detalle: item.detalle,
         icon: item.icon,
       }

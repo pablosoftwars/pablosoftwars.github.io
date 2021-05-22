@@ -19,7 +19,12 @@
               <div v-if="$vuetify.breakpoint.mobile" class="text-center">
                 <v-menu rounded="lg" absolute offset-y>
                   <template #activator="{ on, attrs }">
-                    <v-btn outlined v-bind="attrs" v-on="on">
+                    <v-btn
+                      outlined
+                      aria-label="Menu de rutas y configuracion de sonido"
+                      v-bind="attrs"
+                      v-on="on"
+                    >
                       <v-icon>$vuetify.icons.menuicon</v-icon>
                     </v-btn>
                   </template>
@@ -85,7 +90,12 @@
                   </v-tab>
                   <v-menu rounded="lg" offset-y :close-on-content-click="false">
                     <template #activator="{ on, attrs }">
-                      <v-btn icon v-bind="attrs" v-on="on">
+                      <v-btn
+                        icon
+                        aria-label="configuracion de sonido"
+                        v-bind="attrs"
+                        v-on="on"
+                      >
                         <v-icon>$vuetify.icons.cogicon</v-icon>
                       </v-btn>
                     </template>

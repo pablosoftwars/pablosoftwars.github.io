@@ -27,6 +27,7 @@ import CogIcon from '@/components/icons/cogIcon.vue'
 import MenuIcon from '@/components/icons/menuIcon.vue'
 import WhatsappIcon from '@/components/icons/whatsappIcon.vue'
 import GmailIcon from '@/components/icons/gmailIcon.vue'
+import BirreteIcon from '@/components/icons/birreteIcon.vue'
 
 import CheckBoxIconBlank from '@/components/icons/checkboxIconBlank.vue'
 import CheckBoxIconMarked from '@/components/icons/checkboxIconMarked.vue'
@@ -45,6 +46,9 @@ export default {
         component: CheckBoxIconMarked,
       },
       ///////////////////////
+      birreteicon: {
+        component: BirreteIcon,
+      },
       gmailicon: {
         component: GmailIcon,
       },

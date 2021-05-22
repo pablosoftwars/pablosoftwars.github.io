@@ -41,21 +41,21 @@ export default {
           name: 'Caja Petrolera de Salud',
           position: 'Remplazo temporal en Soporte Tecnico',
           detalle:
-            'Mantenimiento de impresoras e instalacion, Compartir Archivos dentro del dominio además de otras tareas',
+            'Mantenimiento e instalacion de impresoras, compartir archivos dentro del dominio además de otras tareas',
         },
         {
           justifyItem: 'center',
           name: 'Caja Petrolera de Salud',
           position: 'Pasante en el area Desarrollo de aplicaciones',
           detalle:
-            'Investigacion y Desarrollo de aplicacion movil con Android Studio',
+            'Investigacion y desarrollo de aplicacion movil con Android Studio',
         },
         {
           justifyItem: 'end',
           name: 'Tigo Money',
           position: 'Pasante Soporte Tecnico',
           detalle:
-            'Gestion de Inventario, configuracion, envio y recepcion de dispositivos mobiprint`s',
+            'Gestion de inventario, configuracion, envio y recepcion de dispositivos mobiprint`s',
         },
       ],
     }

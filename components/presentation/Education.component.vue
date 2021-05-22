@@ -3,43 +3,48 @@
     <v-card-title>
       <span class="caja-title">Educacion</span>
     </v-card-title>
-    <v-card-text class="px-5">
-      <v-row>
-        <v-col class="d-flex flex-wrap justify-space-around">
-          <v-card
-            v-for="(item, i) in listEducation"
-            :key="i"
-            flat
-            class="iconsStudy transparent text-center"
-          >
-            <v-icon size="100">{{ item.icon }}</v-icon>
-            <v-card-title
-              class="
-                py-0
-                d-flex
-                align-center
-                justify-center
-                teal--text
-                text--darken-2
-              "
+    <v-card-text class="px-5 d-flex flex-wrap justify-space-around">
+      <v-card
+        v-for="(item, i) in listEducation"
+        :key="i"
+        flat
+        class="mx-auto iconsStudy transparent text-center"
+      >
+        <v-icon size="100">{{ item.icon }}</v-icon>
+        <v-card-title
+          class="
+            py-0
+            d-flex
+            align-center
+            justify-center
+            teal--text
+            text--darken-2
+          "
+        >
+          {{ item.name }}
+        </v-card-title>
+        <v-card-text>
+          <v-list shaped dense color="transparent">
+            <v-list-item
+              v-for="(grades, k) in item.grades"
+              :key="k"
+              class="title font-weight-light"
             >
-              {{ item.name }}
-            </v-card-title>
-            <v-list shaped dense color="transparent">
-              <v-list-item
-                v-for="(grades, k) in item.grades"
-                :key="k"
-                class="title font-weight-light"
-              >
-                <v-list-item-icon>
-                  <v-icon>mdi-blur</v-icon>
-                </v-list-item-icon>
-                {{ grades }}
-              </v-list-item>
-            </v-list>
-          </v-card>
-        </v-col>
-      </v-row>
+              <v-list-item-icon>
+                <v-icon>$vuetify.icons.birreteicon</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-subtitle
+                  class="title font-weight-light d-flex text-left text-wrap"
+                  style="line-height: 26px; align-items: start"
+                >
+                  {{ grades }}
+                </v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list>
+        </v-card-text>
+      </v-card>
     </v-card-text>
   </v-card>
 </template>

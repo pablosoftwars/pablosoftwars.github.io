@@ -4,6 +4,7 @@
       <v-tooltip v-for="(item, i) in listContact" :key="i" bottom color="teal">
         <template #activator="{ on, attrs }">
           <v-btn
+            :aria-label="item.description"
             color="blue-grey darken-4"
             outlined
             x-large
@@ -36,21 +37,25 @@ export default {
           icon: '$vuetify.icons.gmailicon',
           tooltip: 'Email: pablquir@gmail.com',
           url: 'mailto:pablquir@gmail.com',
+          description: 'link de correo gmail',
         },
         {
           icon: '$vuetify.icons.whatsappicon',
           tooltip: 'Whatsapp: 591 75544663',
           url: 'https://wa.me/59175544663',
+          description: 'link de mensajeria whatsapp',
         },
         {
           icon: '$vuetify.icons.githubicon',
           tooltip: 'https://github.com/pablosoftwars/pablosoftwars.github.io',
           url: 'https://github.com/pablosoftwars/pablosoftwars.github.io',
+          description: 'link de red social para desarrolloadores github',
         },
         {
           icon: '$vuetify.icons.linkedinicon',
           tooltip: 'https://www.linkedin.com/in/pablo-quiroz-7b6181176',
           url: 'https://www.linkedin.com/in/pablo-quiroz-7b6181176',
+          description: 'link de red social de curriculums linkedin',
         },
       ],
     }

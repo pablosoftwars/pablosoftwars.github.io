@@ -16,13 +16,9 @@ export default {
   data() {
     return {
       parrafo: [
-        'Egresado de la carrera de ingenieria de sistemas en busca de oportunidades laborales con crecimiento profesional, para poner en practica todo lo aprendido y poder formar parte de su equipo de trabajo entorno a la vocacion y asi poder dar buenos resultados en los objetivos y metas generales de la empresa u organizacion',
-        'Me considero una persona responsable, dinamico y creativo con facilidad de adaptacion a trabajos bajo presion con alta disponibilidad para adquirir nuevos conocimientos',
+        'Egresado de la carrera de ingeniería de sistemas en busca de oportunidades laborales con crecimiento profesional, para poner en practica todo lo aprendido y poder formar parte de su equipo de trabajo entorno a la vocación y asi poder dar buenos resultados en los objetivos y metas generales de la empresa u organización',
+        'Me considero una persona responsable, dinámico y creativo con facilidad de adaptación y alta disponibilidad para adquirir nuevos conocimientos',
       ],
-      parrafo1:
-        'Egresado de la carrera de ingenieria de sistemas en busca de oportunidades laborales con crecimiento profesional, para poner en practica todo lo aprendido y poder formar parte de su equipo de trabajo entorno a la vocacion y asi poder dar buenos resultados en los objetivos y metas generales de la empresa u organizacion',
-      parrafo2:
-        'Me considero una persona responsable, dinamico y creativo con facilidad de adaptacion a trabajos bajo presion con alta disponibilidad para adquirir nuevos conocimientos',
     }
   },
   mounted() {
