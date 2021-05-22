@@ -9,6 +9,9 @@
 import MainLanguage from '~/components/skill/MainLanguage.component.vue'
 import OtherSkill from '~/components/skill/OtherSkill.component.vue'
 export default {
+  head: {
+    titleTemplate: '%s | Habilidades Tecnicas',
+  },
   components: {
     MainLanguage,
     OtherSkill,

@@ -7,7 +7,7 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     titleTemplate: '%s - cv-web',
-    title: 'cv-web',
+    title: 'Curriculum Web',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -51,6 +51,8 @@ export default {
   pwa: {
     manifest: {
       lang: 'en',
+      background_color: '#e6e6e6',
+      theme_color: '#e6e6e6',
     },
   },
 

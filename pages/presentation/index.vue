@@ -9,6 +9,9 @@
 import Presentation from '~/components/presentation/Presentation.component.vue'
 import Education from '~/components/presentation/Education.component.vue'
 export default {
+  head: {
+    titleTemplate: '%s | Presentacion',
+  },
   components: {
     Presentation,
     Education,
