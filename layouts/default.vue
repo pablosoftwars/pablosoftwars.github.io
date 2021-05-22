@@ -210,6 +210,7 @@ export default {
       this.mutateStateSoundEffect()
     },
     playHover() {
+      // TODO (bug 1)
       if (this.stateSoundEffect) {
         this.audioEffectsHover.play()
         this.audioEffectsHover.volume = 0.2

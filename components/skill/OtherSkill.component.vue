@@ -265,6 +265,7 @@ export default {
       this.listSecondary[16].value = 70 // gitlab
     },
     playSoundHover() {
+      // TODO (bug 1)
       if (this.stateSoundEffect) {
         this.audioEffectsHover.currentTime = 0
         this.audioEffectsHover.play()
