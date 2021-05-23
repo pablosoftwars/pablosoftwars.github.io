@@ -79,6 +79,7 @@ export default {
       })
     },
     playSoundHover() {
+      // TODO (bug 1) En Chrome tiene politicas de seguridad en reproduccion de sonido automaticas que arroja Error en consola
       if (this.stateSoundEffect) {
         this.audioEffectsHover.currentTime = 0
         this.audioEffectsHover.play()
