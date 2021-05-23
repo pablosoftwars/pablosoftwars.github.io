@@ -2,7 +2,13 @@
   <v-card flat class="transparent">
     <div class="photo-container d-flex align-center justify-center">
       <v-avatar size="160">
-        <img class="photo-frame" src="~/static/profile-photo.png" alt="photo" />
+        <v-img
+          class="photo-frame"
+          src="profile-photo.png"
+          lazy-src="profile-photo.png"
+          alt="photo"
+          aspect-ratio="1"
+        ></v-img>
       </v-avatar>
       <div class="circle-container">
         <div class="circle-item"></div>
