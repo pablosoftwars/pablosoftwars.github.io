@@ -1,10 +1,10 @@
 <template>
   <v-card flat class="transparent">
     <div class="photo-container d-flex align-center justify-center">
-      <v-avatar size="160">
+      <v-avatar size="180">
         <v-img
           class="photo-frame"
-          src="profile-photo.png"
+          src="fotoperfil.png"
           lazy-src="profile-photo.png"
           alt="photo"
           aspect-ratio="1"
@@ -49,14 +49,6 @@ export default {
   z-index: 2;
   height: 242px;
 }
-.photo-background {
-  position: absolute;
-  left: 50%;
-  z-index: -1;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
 .circle-container {
   position: absolute;
   display: flex;
@@ -68,10 +60,11 @@ export default {
 
 .circle-item {
   position: absolute;
-  height: 180px;
-  width: 180px;
+  height: 190px;
+  width: 190px;
   border-radius: 50%;
-  background-color: rgba(10, 10, 10, 0.4);
+  background-color: var(--v-background-base);
+  opacity: 0.5;
   z-index: -1;
 }
 </style>

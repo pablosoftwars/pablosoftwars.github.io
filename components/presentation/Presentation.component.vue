@@ -1,9 +1,12 @@
 <template>
-  <v-card flat color="transparent" class="rounded-xl fill-height">
-    <v-card-title>
-      <span class="caja-title">Presentacion</span>
-    </v-card-title>
-    <v-card-text class="mx-5">
+  <v-card flat color="transparent">
+    <div class="d-flex">
+      <div :class="[$vuetify.breakpoint.mobile ? 'ml-1' : 'ml-4', 'box-title']">
+        <span class="title">Presentacion</span>
+      </div>
+    </div>
+    <v-divider class="ml-4"></v-divider>
+    <v-card-text class="px-5">
       <p v-for="(item, i) in parrafo" :key="i" class="title paragraphStudy">
         {{ item }}
       </p>

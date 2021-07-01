@@ -1,21 +1,26 @@
 <template>
-  <v-card flat class="transparent rounded-xl pb-2">
+  <v-card flat class="transparent pb-2">
     <v-card flat color="transparent">
-      <v-card-title class="font-weight-black">
-        <span class="caja-title">lenguajes</span>
-      </v-card-title>
+      <div class="d-flex">
+        <div
+          :class="[$vuetify.breakpoint.mobile ? 'ml-1' : 'ml-4', 'box-title']"
+        >
+          <span class="title">Lenguajes de Programacion</span>
+        </div>
+      </div>
+      <v-divider class="ml-4"></v-divider>
       <v-card-text>
         <v-row>
           <v-col class="d-flex flex-wrap justify-space-around">
             <div v-for="(item, i) in listPrimary" :key="i" class="mt-4">
               <v-progress-circular
-                color="teal darken-2"
+                color="primary"
                 :value="item.value"
                 size="100"
                 width="10"
                 class="mx-5"
               >
-                <v-icon color="blue-grey darken-4" x-large>
+                <v-icon x-large>
                   {{ item.icon }}
                 </v-icon>
               </v-progress-circular>

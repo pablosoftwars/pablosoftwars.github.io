@@ -1,3 +1,5 @@
+import colors from 'vuetify/es5/util/colors'
+
 import VueIcon from '@/components/icons/vueIcon.vue'
 import NuxtIcon from '@/components/icons/nuxtIcon.vue'
 import LaravelIcon from '@/components/icons/laravelIcon.vue'
@@ -33,6 +35,32 @@ import CheckBoxIconBlank from '@/components/icons/checkboxIconBlank.vue'
 import CheckBoxIconMarked from '@/components/icons/checkboxIconMarked.vue'
 
 export default {
+  theme: {
+    options: { customProperties: true },
+    dark: false,
+    themes: {
+      dark: {
+        primary: colors.blue.darken2,
+        accent: colors.grey.darken3,
+        secondary: colors.grey.darken2,
+        info: colors.teal.lighten1,
+        warning: colors.amber.base,
+        error: colors.deepOrange.accent4,
+        success: colors.green.accent3,
+        background: '#d5d5d5',
+      },
+      light: {
+        primary: colors.blue.darken2,
+        accent: colors.blue.accent1,
+        secondary: colors.grey.darken3,
+        info: colors.blue,
+        warning: colors.orange.darken1,
+        error: colors.red.accent2,
+        success: colors.green,
+        background: '#0c0c0c',
+      },
+    },
+  },
   font: {
     family: 'Droid Sans'
   },

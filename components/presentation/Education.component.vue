@@ -1,8 +1,11 @@
 <template>
-  <v-card flat class="transparent rounded-xl fill-height">
-    <v-card-title>
-      <span class="caja-title">Educacion</span>
-    </v-card-title>
+  <v-card flat class="transparent fill-height">
+    <div class="d-flex">
+      <div :class="[$vuetify.breakpoint.mobile ? 'ml-1' : 'ml-4', 'box-title']">
+        <span class="title">Educacion</span>
+      </div>
+    </div>
+    <v-divider class="ml-4"></v-divider>
     <v-card-text class="px-5 d-flex flex-wrap justify-space-around">
       <v-card
         v-for="(item, i) in listEducation"
@@ -12,19 +15,17 @@
       >
         <v-icon size="100">{{ item.icon }}</v-icon>
         <v-card-title
-          class="
-            py-0
-            d-flex
-            align-center
-            justify-center
-            teal--text
-            text--darken-2
-          "
+          class="py-0 d-flex align-center justify-center primary--text"
         >
           {{ item.name }}
         </v-card-title>
         <v-card-text>
-          <v-list shaped dense color="transparent">
+          <v-list
+            class="rounded-xl"
+            style="background-color: transparent"
+            outlined
+            dense
+          >
             <v-list-item
               v-for="(grades, k) in item.grades"
               :key="k"

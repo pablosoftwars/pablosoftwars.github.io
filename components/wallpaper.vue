@@ -3,6 +3,16 @@
 </template>
 <script>
 export default {
+  props: {
+    linecolor: {
+      type: String,
+      default: 'gray',
+    },
+    bgcolor: {
+      type: String,
+      default: 'rgba(230, 230, 230, 0.04)',
+    },
+  },
   data() {
     return {
       test: 'prueba',
@@ -36,7 +46,7 @@ export default {
     animate() {
       window.requestAnimationFrame(this.animate)
 
-      this.ctx.fillStyle = 'rgba(230, 230, 230, 0.04)'
+      this.ctx.fillStyle = this.bgcolor
       this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height)
       this.ctx.beginPath()
       this.ctx.moveTo(0, this.canvas.height / 2)
@@ -50,7 +60,7 @@ export default {
               Math.sin(this.increment)
         )
       }
-      this.ctx.strokeStyle = 'rgb(37, 48, 54)'
+      this.ctx.strokeStyle = this.linecolor
       this.ctx.stroke()
       this.increment += this.wave.frequency
     },

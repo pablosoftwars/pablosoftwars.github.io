@@ -1,11 +1,16 @@
 <template>
   <v-card flat class="transparent text-center">
     <v-card-actions class="d-flex flex-wrap align-center justify-center">
-      <v-tooltip v-for="(item, i) in listContact" :key="i" bottom color="teal">
+      <v-tooltip
+        v-for="(item, i) in listContact"
+        :key="i"
+        bottom
+        color="primary"
+      >
         <template #activator="{ on, attrs }">
           <v-btn
             :aria-label="item.description"
-            color="blue-grey darken-4"
+            color="secondary"
             outlined
             x-large
             class="mx-5 my-2 iconos"

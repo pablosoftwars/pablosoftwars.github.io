@@ -1,10 +1,17 @@
 <template>
-  <v-card flat class="transparent rounded-xl pb-2">
+  <v-card flat class="transparent pb-2">
     <v-card flat class="transparent">
-      <v-card-title class="font-weight-black">
-        <span class="caja-title">otras habilidades</span>
-      </v-card-title>
+      <div class="d-flex">
+        <div
+          :class="[$vuetify.breakpoint.mobile ? 'ml-1' : 'ml-4', 'box-title']"
+        >
+          <span class="title">Otras Habilidades</span>
+        </div>
+      </div>
+      <v-divider class="ml-4"></v-divider>
+
       <br />
+
       <v-card-text>
         <v-row no-gutters class="mx-5">
           <v-col
@@ -17,17 +24,15 @@
               size="200"
               width="40"
               :value="dataProgressCircle.value"
-              color="teal darken-2"
+              color="primary"
             >
-              <v-icon x-large color="blue-grey darken-4">
+              <v-icon x-large>
                 {{ dataProgressCircle.icon }}
               </v-icon>
             </v-progress-circular>
             <div class="mt-4">
               <v-chip outlined>
-                <span
-                  class="mr-2 teal--text text--darken-3 title font-weight-bold"
-                >
+                <span class="mr-2 primary--text title font-weight-bold">
                   {{ dataProgressCircle.type }}
                 </span>
                 <v-divider vertical></v-divider>
@@ -42,38 +47,47 @@
           </v-col>
 
           <v-col cols="12" md="4" sm="4">
-            <v-responsive class="overflow-y-auto" height="50vh">
-              <v-list rounded color="transparent">
-                <v-list-item-group
-                  v-model="selectedItem"
-                  active-class="teal--text text--darken-2"
-                >
-                  <v-list-item
-                    v-for="(item, i) in listSecondary"
-                    :key="i"
-                    two-line
-                    @click="setProgressSkill(item)"
-                    @mouseenter="
-                      $vuetify.breakpoint.mobile ? '' : playSoundHover()
-                    "
+            <v-card
+              class="rounded-xl overflow-y-auto"
+              style="background: transparent"
+              outlined
+            >
+              <v-responsive class="overflow-y-auto transparent" height="50vh">
+                <v-list rounded class="transparent">
+                  <v-list-item-group
+                    v-model="selectedItem"
+                    active-class="primary--text"
                   >
-                    <v-list-item-icon>
-                      <v-icon large color="blue-grey darken-4">
-                        {{ item.icon }}
-                      </v-icon>
-                    </v-list-item-icon>
-                    <v-divider vertical></v-divider>
-                    <v-list-item-content>
-                      <v-list-item-title
-                        class="title font-weight-regular text-center"
-                      >
-                        {{ item.text }}
-                      </v-list-item-title>
-                    </v-list-item-content>
-                  </v-list-item>
-                </v-list-item-group>
-              </v-list>
-            </v-responsive>
+                    <v-list-item
+                      v-for="(item, i) in listSecondary"
+                      :key="i"
+                      two-line
+                      @click="setProgressSkill(item)"
+                      @mouseover="
+                        $vuetify.breakpoint.mobile ? '' : playSoundHover()
+                      "
+                      @mouseleave="
+                        $vuetify.breakpoint.mobile ? '' : stopSoundHover()
+                      "
+                    >
+                      <v-list-item-icon>
+                        <v-icon large>
+                          {{ item.icon }}
+                        </v-icon>
+                      </v-list-item-icon>
+                      <v-divider vertical></v-divider>
+                      <v-list-item-content>
+                        <v-list-item-title
+                          class="title font-weight-regular text-center"
+                        >
+                          {{ item.text }}
+                        </v-list-item-title>
+                      </v-list-item-content>
+                    </v-list-item>
+                  </v-list-item-group>
+                </v-list>
+              </v-responsive>
+            </v-card>
           </v-col>
         </v-row>
       </v-card-text>
@@ -267,7 +281,6 @@ export default {
     playSoundHover() {
       // TODO (bug 1)
       if (this.stateSoundEffect) {
-        this.audioEffectsHover.currentTime = 0
         this.audioEffectsHover.play()
         this.audioEffectsHover.volume = 0.2
       }
@@ -277,6 +290,10 @@ export default {
         this.audioEffectsClick.currentTime = 0
         this.audioEffectsClick.play()
       }
+    },
+    stopSoundHover() {
+      this.audioEffectsHover.currentTime = 0
+      this.audioEffectsHover.pause()
     },
     loadAudio() {
       this.audioEffectsClick = new Audio(
