@@ -91,7 +91,6 @@ export default {
     },
   },
   mounted() {
-    window.console.log(this.$vuetify.theme.themes)
     this.$nextTick(() => {
       setTimeout(() => {
         this.mostrarPreload = false

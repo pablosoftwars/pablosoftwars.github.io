@@ -5,7 +5,7 @@
         <v-img
           class="photo-frame"
           src="fotoperfil.png"
-          lazy-src="profile-photo.png"
+          lazy-src="fotoperfil.png"
           alt="photo"
           aspect-ratio="1"
         ></v-img>

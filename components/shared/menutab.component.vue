@@ -42,8 +42,5 @@ export default {
       ],
     },
   },
-  mounted() {
-    window.console.log(this.listaRuta)
-  },
 }
 </script>
