@@ -2,7 +2,7 @@
   <v-card flat color="transparent">
     <div class="d-flex">
       <div :class="[$vuetify.breakpoint.mobile ? 'ml-1' : 'ml-4', 'box-title']">
-        <span class="title">Presentacion</span>
+        <span class="title">Presentación</span>
       </div>
     </div>
     <v-divider class="ml-4"></v-divider>
@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       parrafo: [
-        'Egresado de la carrera de ingeniería de sistemas en busca de oportunidades laborales con crecimiento profesional, para poner en practica todo lo aprendido y poder formar parte de su equipo de trabajo entorno a la vocación y asi poder dar buenos resultados en los objetivos y metas generales de la empresa u organización',
+        'Egresado de la carrera de ingeniería de sistemas en busca de oportunidades laborales con crecimiento profesional, para poner en práctica todo lo aprendido y poder formar parte de su equipo de trabajo en torno a la vocación y así poder dar buenos resultados en los objetivos y metas generales de la empresa u organización',
         'Me considero una persona responsable, dinámico y creativo con facilidad de adaptación y alta disponibilidad para adquirir nuevos conocimientos',
       ],
     }

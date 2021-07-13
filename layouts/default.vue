@@ -2,8 +2,7 @@
   <v-app>
     <preload v-show="mostrarPreload"></preload>
     <v-main class="containers">
-      <wallpaper :bgcolor="bgcolorTheme"></wallpaper>
-
+      <wallpaper></wallpaper>
       <v-container :class="[mostrarPreload ? 'layout-blur' : '']">
         <v-card
           style="background: transparent"
@@ -37,7 +36,7 @@
 
 <script>
 import Preload from '~/components/preload.vue'
-import Wallpaper from '~/components/wallpaper.vue'
+import Wallpaper from '~/components/shared/wallpaper.vue'
 import BarTitle from '~/components/shared/bartitle.component.vue'
 import TabMenu from '~/components/shared/menutab.component.vue'
 import FloatMenu from '~/components/shared/menufloat.component.vue'
@@ -46,11 +45,11 @@ import ConfigMenu from '~/components/shared/menuconfig.component.vue'
 export default {
   components: {
     Preload,
-    Wallpaper,
     BarTitle,
     TabMenu,
     FloatMenu,
     ConfigMenu,
+    Wallpaper,
   },
   transition: 'scale-transition',
   data() {
@@ -60,35 +59,33 @@ export default {
       mostrarPreload: true,
       audioEffectsHover: null,
       playStop: false,
-      selectedListRoutes: 0,
       listRoutes: [
         {
           icon: 'mdi-apps',
           title: 'Bienvenido',
           url: '/',
-        },
-        {
-          icon: 'mdi-apps',
-          title: 'Presentacion',
-          url: '/presentation',
+          animate: true,
         },
         {
           icon: 'mdi-apps',
           title: 'Habilidades',
           url: '/skill',
+          animate: false,
         },
         {
           icon: 'mdi-house',
           title: 'Experiencia',
           url: '/experience',
+          animate: false,
+        },
+        {
+          icon: 'mdi-apps',
+          title: 'Presentacion',
+          url: '/presentation',
+          animate: false,
         },
       ],
     }
-  },
-  computed: {
-    bgcolorTheme() {
-      return this.$vuetify.theme.isDark ? this.bgdark : this.bglight
-    },
   },
   mounted() {
     this.$nextTick(() => {
@@ -99,4 +96,3 @@ export default {
   },
 }
 </script>
-<style scoped></style>

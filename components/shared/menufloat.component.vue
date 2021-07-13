@@ -22,6 +22,7 @@
             v-for="(item, i) in lista"
             :key="i"
             :to="item.url"
+            @click="setAnimation(item.animate)"
             class="title"
             router
           >
@@ -35,6 +36,7 @@
   </v-speed-dial>
 </template>
 <script>
+import { mapState, mapMutations } from 'vuex'
 export default {
   props: {
     lista: {
@@ -46,6 +48,23 @@ export default {
           url: '/presentation',
         },
       ],
+    },
+  },
+  computed: {
+    ...mapState({
+      stateWaveActive: (state) => state.wallpaper.waveActive,
+    }),
+  },
+  methods: {
+    ...mapMutations({
+      switchWaveActive: 'wallpaper/changeWaveActive',
+    }),
+    setAnimation(val) {
+      if (val) {
+        this.switchWaveActive(val)
+      } else {
+        this.switchWaveActive(val)
+      }
     },
   },
 }

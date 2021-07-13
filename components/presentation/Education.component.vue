@@ -2,7 +2,7 @@
   <v-card flat class="transparent fill-height">
     <div class="d-flex">
       <div :class="[$vuetify.breakpoint.mobile ? 'ml-1' : 'ml-4', 'box-title']">
-        <span class="title">Educacion</span>
+        <span class="title">Educación</span>
       </div>
     </div>
     <v-divider class="ml-4"></v-divider>
@@ -58,7 +58,7 @@ export default {
         {
           icon: '$vuetify.icons.donboscoicon',
           name: 'Colegio Don Bosco',
-          grades: ['Primaria', 'Secundaria', 'Bachiller en Humanidades'],
+          grades: ['Bachiller en Humanidades'],
         },
         {
           icon: '$vuetify.icons.mamamargaritaicon',
@@ -68,7 +68,7 @@ export default {
         {
           icon: '$vuetify.icons.utepsaicon',
           name: 'Universidad Utepsa',
-          grades: ['Egresado de Ingenieria de Sistemas'],
+          grades: ['Egresado en Ingeniería de Sistemas'],
         },
       ],
     }

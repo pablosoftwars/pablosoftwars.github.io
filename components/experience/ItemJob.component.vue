@@ -24,13 +24,16 @@
               <p class="cajita primary--text mb-0">
                 {{ item.name }}
               </p>
+              <p class="title secondary--text">
+                {{ item.season }}
+              </p>
               <p class="title pb-0 secondary--text">
                 {{ item.position }}
               </p>
             </v-card-title>
             <v-card-text>
               <p class="title font-weight-light">
-                {{ item.detalle }}
+                {{ item.description }}
               </p>
             </v-card-text>
           </v-card>
@@ -47,23 +50,26 @@ export default {
         {
           justifyItem: 'start',
           name: 'Caja Petrolera de Salud',
-          position: 'Remplazo temporal en Soporte Tecnico',
-          detalle:
-            'Mantenimiento e instalacion de impresoras, compartir archivos dentro del dominio además de otras tareas',
+          position: 'Pasante en el área Desarrollo de aplicaciones',
+          season: '12/04/2016 - 30/06/2016',
+          description:
+            'Investigación y Planeamiento para el desarrollo de aplicación móvil con Android Studio donde se buscó la viabilidad del proyecto para soluciones de aglomeración en filas o colas',
         },
         {
           justifyItem: 'center',
           name: 'Caja Petrolera de Salud',
-          position: 'Pasante en el area Desarrollo de aplicaciones',
-          detalle:
-            'Investigacion y desarrollo de aplicacion movil con Android Studio',
+          position: 'Remplazo temporal en Soporte Técnico',
+          season: '04/07/2016 - 30/07/2016',
+          description:
+            'Mantenimiento e instalación de impresoras, compartir archivos dentro del dominio, manejo de Microsoft Word y Microsoft Excel además de otras tareas',
         },
         {
           justifyItem: 'end',
           name: 'Tigo Money',
-          position: 'Pasante Soporte Tecnico',
-          detalle:
-            'Gestion de inventario, configuracion, envio y recepcion de dispositivos mobiprint`s',
+          position: 'Mobile Financial Service',
+          season: '03/07/2018 - 01/02/2019',
+          description:
+            'Gestión de inventario con Microsoft Word y Microsoft Excel de Archivadores, configuración, envíos y recepción de dispositivos mobiprint`s(facturador electrónico)',
         },
       ],
     }
@@ -86,6 +92,6 @@ export default {
 <style scoped>
 .cajita {
   border-bottom: 8px solid;
-  border-bottom-color: gray;
+  border-bottom-color: var(--v-secondary-base);
 }
 </style>

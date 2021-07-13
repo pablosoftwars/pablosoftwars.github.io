@@ -199,7 +199,7 @@ export default {
         },
         {
           icon: '$vuetify.icons.inkscapeicon',
-          text: 'gimp',
+          text: 'inkscape',
           type: 'App de Escritorio',
           detalle: 'Editor de graficos vectoriales',
           value: '0',

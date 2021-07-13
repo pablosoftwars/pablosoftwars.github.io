@@ -5,7 +5,7 @@
         <div
           :class="[$vuetify.breakpoint.mobile ? 'ml-1' : 'ml-4', 'box-title']"
         >
-          <span class="title">Lenguajes de Programacion</span>
+          <span class="title">Lenguajes de Programación</span>
         </div>
       </div>
       <v-divider class="ml-4"></v-divider>
